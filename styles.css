@@ -459,6 +459,18 @@ ul {
   padding-left: 1rem;
 }
 
+
+.plan-tag {
+  margin: 0 0 0.45rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.plan-tag--green { color: #7bff63; }
+.plan-tag--blue { color: #64b5ff; }
+.plan-tag--purple { color: #b892ff; }
 .plan {
   display: flex;
   flex-direction: column;
