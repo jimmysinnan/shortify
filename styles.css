@@ -542,6 +542,22 @@ ul {
 .motion-split span:nth-child(2) { animation-delay: 0.2s; }
 .motion-split span:nth-child(3) { animation-delay: 0.4s; }
 
+
+.start-cta {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.start-cta h2 {
+  margin-bottom: 1rem;
+}
+
+.contact h2 {
+  font-size: clamp(1.45rem, 3.2vw, 2.1rem);
+  margin-bottom: 0.3rem;
+}
+
 .contact-form {
   margin-top: 1.4rem;
   display: grid;
