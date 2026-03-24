@@ -3,223 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shortify — Clip Smart. Scale Fast.</title>
+    <title>SuccessionAI — Démo Notaire</title>
     <meta
       name="description"
-      content="Shortify transforme vos vidéos longues en moteur de distribution automatisé avec des shorts optimisés pour performer."
+      content="Assistant IA de pré-ouverture et suivi de dossier de succession pour étude notariale."
     />
-    <meta property="og:title" content="Shortify — Your Distribution Machine" />
-    <meta
-      property="og:description"
-      content="Une infrastructure média automatisée pour transformer 1 vidéo en 10 à 40 opportunités de visibilité."
-    />
-    <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#1C1F24" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="bg-grid" aria-hidden="true"></div>
-    <header class="site-header">
-      <a class="logo" href="#hero" aria-label="Shortify accueil">
-        <img class="logo-img" src="actifs/shortify_logo_full.png" alt="Shortify" />
-      </a>
-      <nav>
-        <a href="#how">Process</a>
-        <a href="#plans">Plans</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="btn btn-small" href="#contact">Get Clips</a>
+    <header class="header">
+      <div class="logo">
+        <span class="logo-mark">⚖️</span>
+        Étude Bertrand &amp; Associés
+        <span class="logo-sep">|</span>
+        <span class="logo-sub">Agent Succession IA — Démo</span>
+      </div>
+      <div class="header-right">
+        <div class="view-toggle" aria-label="Choix de vue">
+          <button class="view-btn active" data-view="both" type="button">Vue complète</button>
+          <button class="view-btn" data-view="chat" type="button">Héritier</button>
+          <button class="view-btn" data-view="notaire" type="button">Notaire</button>
+        </div>
+        <div class="secure-badge">🔒 Chiffré · RGPD · Démo</div>
+      </div>
     </header>
 
-    <main>
-      <section class="hero section" id="hero">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Studio de support média court</p>
-          <h1>Clip Smart. <span class="text-accent">Scale Fast.</span></h1>
-          <p class="hero-description">Shortify convertit chaque vidéo longue en dizaines de formats courts prêts à performer.</p>
-          <div class="cta-group">
-            <a class="btn" href="#contact">Obtenez des Clips</a>
-            <a class="btn btn-ghost" href="#contact">Contactez nous</a>
+    <main class="app dual" id="app">
+      <section class="heritier-view" id="heritier-view">
+        <div class="progress-bar-wrap">
+          <div class="progress-meta">
+            <span class="progress-label" id="prog-label">Étape 1 sur 6 — Identification du défunt</span>
+            <span class="progress-pct" id="prog-pct">8%</span>
           </div>
+          <div class="progress-track"><div class="progress-fill" id="prog-fill" style="width: 8%"></div></div>
+          <div class="stages-row">
+            <span class="stage-pill active">1. Défunt</span>
+            <span class="stage-pill">2. Héritiers</span>
+            <span class="stage-pill">3. Patrimoine</span>
+            <span class="stage-pill">4. Documents</span>
+            <span class="stage-pill">5. Passif</span>
+            <span class="stage-pill">6. Validation</span>
+          </div>
+        </div>
+
+        <div class="chat-area" id="chat-area" aria-live="polite"></div>
+
+        <div class="chat-input-wrap">
+          <textarea
+            id="chat-input"
+            class="chat-input"
+            rows="1"
+            placeholder="Répondez à l'agent ou ajoutez une précision…"
+          ></textarea>
+          <button class="send-btn" id="send-btn" type="button" aria-label="Envoyer">➤</button>
         </div>
       </section>
 
-      <section class="section demo reveal">
-        <h2>Démonstration visuelle</h2>
-        <div class="demo-stage" id="demo-stage">
-          <div class="demo-center">
-            <img src="assets/demo/UGC/long-video.png" alt="long-video" />
-          </div>
-          <div class="connector"></div>
-          <div class="demo-short"><img src="assets/demo/UGC/short-1.png" alt="Clip court 1" /></div>
-          <div class="demo-short"><img src="assets/demo/UGC/short-2.png" alt="Clipx  court 2" /></div>
-          <div class="demo-short"><img src="assets/demo/UGC/short-3.png" alt="Clip court 3" /></div>
-          <div class="demo-short"><img src="assets/demo/UGC/short-4.png" alt="Clip court 4" /></div>
-          <div class="demo-short"><img src="assets/demo/UGC/short-5.png" alt="Clip court 5" /></div>
-          <div class="demo-short"><img src="assets/demo/UGC/short-6.png" alt="Clip court 6" /></div>
+      <aside class="notaire-view" id="notaire-view">
+        <div class="notaire-header">
+          <div class="notaire-title">Tableau de bord — Maître Bertrand</div>
+          <div class="notaire-sub">Dossier succession · suivi live de la collecte</div>
         </div>
-        <div class="mini-features reveal">
-          <article class="mini-feature"><span class="mini-icon" aria-hidden="true">✂️</span><span>Découpage</span></article>
-          <article class="mini-feature"><span class="mini-icon" aria-hidden="true">💬</span><span>Sous-titrage</span></article>
-          <article class="mini-feature"><span class="mini-icon" aria-hidden="true">📐</span><span>Reframe</span></article>
-          <article class="mini-feature"><span class="mini-icon" aria-hidden="true">🎬</span><span>B-Roll</span></article>
-          <article class="mini-feature"><span class="mini-icon" aria-hidden="true">🔊</span><span>Amélioration audio</span></article>
-        </div>
-      </section>
 
-      <section class="section problem reveal">
-        <h2>Une vidéo <span class="text-accent">Trop peu exploitée ?</span></h2>
-        <p>
-          Une seule vidéo longue qui peine à décoller ? Avec Shortify, elle se transforme en
-          <strong>10 à 40 clips percutants</strong> qui décuplent votre visibilité, vos performances et
-          l’impact sur votre audience.
-        </p>
-        <div class="problem-focus">
-          <p>Intensifiez la présence et l'impact de votre contenus long</p>
-          <p>Votre processus de création vidéo, désormais en mode pilote automatique</p>
-          <p>Créez et publiez 5 fois plus de contenus même en vacance, sans vous préoccuper de la production</p>
-        </div>
-      </section>
-      <section class="section" id="how">
-        <h2 class="reveal">Comment ça marche</h2>
-        <div class="how-grid">
-          <article class="card step-card reveal">
-            <div class="step-head">
-              <span class="step-icon" aria-hidden="true">⤴️</span>
-              <span class="step-number">1</span>
+        <div class="notaire-body">
+          <article class="dossier-card">
+            <div class="dossier-card-header">
+              <div>
+                <div class="dossier-name" id="nb-nom">— · —</div>
+                <div class="dossier-ref" id="nb-ref">Dossier en cours d'initialisation</div>
+              </div>
+              <span class="status" id="nb-status">🟡 En cours</span>
             </div>
-            <h3>Upload</h3>
-            <p>Importez vos formats longs (podcast, Stream, interview, vidéo YouTube, vidéo de cour, conférence).</p>
-          </article>
-          <article class="card step-card reveal">
-            <div class="step-head">
-              <span class="step-icon" aria-hidden="true">✨</span>
-              <span class="step-number">2</span>
+            <div class="dossier-body">
+              <div class="mini-stats">
+                <div class="mini-stat"><div class="mini-stat-val" id="nb-heritiers">—</div><div class="mini-stat-lbl">Héritiers</div></div>
+                <div class="mini-stat"><div class="mini-stat-val" id="nb-pieces">0/12</div><div class="mini-stat-lbl">Pièces</div></div>
+                <div class="mini-stat"><div class="mini-stat-val" id="nb-patrimoine">—</div><div class="mini-stat-lbl">Actif brut</div></div>
+              </div>
+              <div class="complete-meta"><span>Complétude du dossier</span><span id="nb-complete-pct">8%</span></div>
+              <div class="complete-track"><div class="complete-fill" id="nb-complete-fill" style="width: 8%"></div></div>
             </div>
-            <h3>Production Shortify</h3>
-            <p>Détection de moments forts, découpe intelligente, rythme, habillage et sous-titres optimisés.</p>
           </article>
-          <article class="card step-card reveal">
-            <div class="step-head">
-              <span class="step-icon" aria-hidden="true">✅</span>
-              <span class="step-number">3</span>
-            </div>
-            <h3>Assurance Qualité</h3>
-            <p>Contrôle qualité des créations.</p>
-          </article>
-          <article class="card step-card reveal">
-            <div class="step-head">
-              <span class="step-icon" aria-hidden="true">🚀</span>
-              <span class="step-number">4</span>
-            </div>
-            <h3>Livraison clips</h3>
-            <p>Vos clips sont livrés prêts à performer sur vos canaux multi-plateformes.</p>
-          </article>
-        </div>
-      </section>
-    
-      <section class="section" id="plans">
-        <h2 class="reveal">Plans Shortify</h2>
-        <div class="card-grid three">
-          <article class="card plan reveal">
-            <p class="plan-tag plan-tag--green">🟢 PACK 1</p>
-            <h3>CLIP BOOST</h3>
-            <ul>
-              <li>1 vidéo à traiter (max 60 min)</li>
-              <li>10 shorts</li>
-              <li>Sous-titres dynamiques</li>
-              <li>Reframe vertical</li>
-              <li>QA léger</li>
-            </ul>
-            <a class="btn" href="#contact">Obtenez des shorts</a>
-          </article>
-          <article class="card plan reveal">
-            <p class="plan-tag plan-tag--blue">🔵 PACK 2 (abonnement)</p>
-            <h3>WEEKLY ENGINE</h3>
-            <ul>
-              <li>1 vidéo à traiter / semaine</li>
-              <li>4 vidéos longues à traiter / mois</li>
-              <li>40 shorts (≈10 par vidéo)</li>
-              <li>QA complet</li>
-              <li>Export multi-plateforme</li>
-            </ul>
-            <a class="btn" href="#contact">Obtenez des shorts</a>
-          </article>
-          <article class="card plan reveal">
-            <p class="plan-tag plan-tag--purple">🟣 PACK 3</p>
-            <h3>DOMINATION MEDIA</h3>
-            <ul>
-              <li>2 vidéos à traiter / semaine</li>
-              <li>8 vidéos à traiter / mois</li>
-              <li>80 shorts</li>
-              <li>QA renforcé</li>
-              <li>Branding complet</li>
-              <li>Hooks alternatifs (2 versions)</li>
-              <li>Planning de publication</li>
-            </ul>
-            <a class="btn" href="#contact">Obtenez des shorts</a>
-          </article>
-        </div>
-      </section>
 
- <section class="section start-cta reveal">
-        <h2>Commencez avec Shortify</h2>
-        <a class="btn" href="#contact">Obtenez des shorts</a>
-      </section>
+          <section>
+            <div class="n-section-label">Héritiers identifiés</div>
+            <div class="heritiers-list" id="heritiers-list">
+              <p class="placeholder">En attente des informations…</p>
+            </div>
+          </section>
 
-      <section class="section contact" id="contact">
-        <h2 class="reveal">Parlons de votre projet</h2>
-        <form class="contact-form reveal">
-          <div class="form-row">
-            <label>Nom<input type="text" name="nom" required /></label>
-            <label>Prénom<input type="text" name="prenom" required /></label>
-          </div>
-          <label>Nom de structure<input type="text" name="structure" /></label>
-          <label>Email<input type="email" name="email" required /></label>
-          <label
-            >Type d’activité
-            <select name="activite" required>
-              <option value="">Sélectionnez</option>
-              <option>UGC</option>
-              <option>Podcast</option>
-              <option>YouTube</option>
-              <option>Coaching</option>
-              <option>Agence</option>
-              <option>Startup</option>
-              <option>Autre</option>
-            </select>
-          </label>
-          <div class="form-row">
-            <label>Vidéos à shorter / mois<input type="number" name="volume" min="1" /></label>
-            <label>Durée moyenne des vidéos<input type="text" name="duree" placeholder="ex: 45 min" /></label>
-          </div>
-          <label>Message libre<textarea name="message" rows="4"></textarea></label>
-          <div class="cta-group">
-            <button class="btn" type="submit">Obtenez des clips</button>
-            <a class="btn btn-ghost" href="#contact">Contactez nous</a>
-          </div>
-        </form>
-      </section>
+          <section>
+            <div class="n-section-label">État des pièces</div>
+            <div class="pieces-grid" id="pieces-grid"><p class="placeholder">En attente…</p></div>
+          </section>
+
+          <section>
+            <div class="n-section-label">Points d'attention</div>
+            <div id="alertes-list">
+              <div class="alert-box warn"><span>⏳</span><p>Dossier ouvert — échéance fiscale de déclaration à surveiller.</p></div>
+            </div>
+          </section>
+
+          <section>
+            <div class="n-section-label">Actions notaire</div>
+            <div class="actions-grid">
+              <button type="button" class="action-btn" id="btn-generate-note">Générer note de synthèse</button>
+              <button type="button" class="action-btn" id="btn-export-json">Exporter dossier (JSON)</button>
+              <button type="button" class="action-btn" id="btn-reset-demo">Réinitialiser la démo</button>
+            </div>
+          </section>
+        </div>
+      </aside>
     </main>
 
-    <footer class="site-footer">
-      <div class="logo"><img class="logo-img" src="actifs/shortify_logo_full.png" alt="Shortify" /></div>
-      <p>Shortify - Your Short Content Distribution</p>
-      <div class="footer-links">
-        <a href="#">Mentions légales</a>
-        <a href="#contact">Contact</a>
-        <a href="mailto:hello@shortify.media">hello@shortify.media</a>
+    <template id="doc-check-template">
+      <div class="doc-check">
+        <div class="doc-check-header"><span>Documents prioritaires</span><span id="doc-counter">0 / 5 reçus</span></div>
+        <button class="doc-item" data-doc="0" type="button"><span class="doc-status doc-miss">○</span>Acte de décès</button>
+        <button class="doc-item" data-doc="1" type="button"><span class="doc-status doc-miss">○</span>Livret de famille</button>
+        <button class="doc-item" data-doc="2" type="button"><span class="doc-status doc-miss">○</span>Pièces d'identité héritiers</button>
+        <button class="doc-item" data-doc="3" type="button"><span class="doc-status doc-miss">○</span>Avis d'imposition N-1</button>
+        <button class="doc-item" data-doc="4" type="button"><span class="doc-status doc-miss">○</span>Relevés bancaires récents</button>
       </div>
-    </footer>
+      <div class="upload-zone" id="upload-zone">
+        <div class="upload-zone-icon">📎</div>
+        <p class="upload-zone-text">Uploader un document de démonstration</p>
+        <p class="upload-zone-sub">Simulation locale (aucun transfert réel)</p>
+      </div>
+    </template>
 
     <script src="script.js"></script>
   </body>
 </html>
-
